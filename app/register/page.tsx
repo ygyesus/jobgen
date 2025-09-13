@@ -1,5 +1,12 @@
-import SignUpForm from '../components/SignUpForm';
+// src/app/register/page.tsx
+
+import { Suspense } from 'react';
+import SignUpForm from '../../components/SignUpForm';
 
 export default function RegisterPage() {
-    return <SignUpForm />;
+    return (
+        <Suspense fallback={<div>Loading registration form...</div>}>
+            <SignUpForm />
+        </Suspense>
+    );
 }
